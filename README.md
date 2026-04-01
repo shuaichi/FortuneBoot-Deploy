@@ -1,4 +1,13 @@
-# 一键部署
+# 部署说明
+
+## Docker 部署（推荐）
+
+项目提供预构建的 Native Image Docker 镜像，支持 `linux/amd64` 和 `linux/arm64` 架构。
+
+镜像仓库：
+- DockerHub：`shuaichi/fortuneboot`
+- 阿里云：`registry.cn-hangzhou.aliyuncs.com/chishenjianglin/fortuneboot`
+
 ## SQLite模式
 数据持久化在 `/data` 卷中
 ```bash
@@ -100,15 +109,6 @@ services:
 - **SQLite 模式**：迁移脚本位于 `fortuneboot-infrastructure/src/main/resources/db/migration/sqlite/`，使用 V1.5.0 全量脚本
 
 对于已有数据的 MySQL 实例，Flyway 会通过表/列存在性智能检测当前版本并设置 baseline，无需担心数据丢失。
-# 部署说明
-
-## Docker 部署（推荐）
-
-项目提供预构建的 Native Image Docker 镜像，支持 `linux/amd64` 和 `linux/arm64` 架构。
-
-镜像仓库：
-- DockerHub：`shuaichi/fortuneboot`
-- 阿里云：`registry.cn-hangzhou.aliyuncs.com/chishenjianglin/fortuneboot`
 
 # APP下载地址
 支持安卓和IOS，欢迎来试用。
